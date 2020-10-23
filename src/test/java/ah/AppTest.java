@@ -15,9 +15,17 @@ public class AppTest {
     public void testApp() {
         assertTrue(true);
     }
-    
+
     @Test
-    public void checkIfLeap(){
-        assertEquals (true, App.isLeap(2000));
+    public void checkIfLeap() {
+        assertEquals(true, App.isLeap(2000));
+        assertEquals(false, App.isLeap(2001));
+        assertEquals(true, App.isLeap(1600));
+        assertEquals(false, App.isLeap(1700));
+        assertEquals(true, App.isLeap(1720));
+        assertEquals(false, App.isLeap(1725));
+        assertEquals(true, App.isLeap(2008));
+        assertEquals(false, App.isLeap(2100));
     }
+
 }
